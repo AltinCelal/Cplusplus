@@ -160,5 +160,5 @@ Büyük → küçük	 implicit
 {} ile narrowing	 compile error
 void* → T*	
 Overload etkisi	 çok önemli
-
+DAHA DETAYLI BILGIYI AYNI REPO DA IMPLICIT CONVERSION ADI ALTINDA BULABILIRSINIZ
 */
