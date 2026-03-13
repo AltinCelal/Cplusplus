@@ -79,7 +79,7 @@ signed olan (int) → unsigned int’e dönüştürülür
 
 -1 → 4294967295
 
-📌 C++’ta bu davranış aynen C gibi, ama:
+ C++’ta bu davranış aynen C gibi, ama:
 
 Overload seçimini
 
@@ -92,16 +92,16 @@ sessizce bozar
 3️⃣ C++’ta NARROWING dönüşümler (çok kritik fark)
 3.1 Atama ile (hala izinli)
 double d = 3.7;
-int i = d;   // ❌ mantıksal hata ama derlenir
+int i = d;   // mantıksal hata ama derlenir
 
-3.2 Liste başlatmada {} YASAK 🚫
-int i{3.7};   // ❌ compile-time error
+3.2 Liste başlatmada {} YASAK 
+int i{3.7};   // compile-time error
 
 
-👉 C++11+ farkı
-👉 Bilinçli güvenlik mekanizması
+ C++11+ farkı
+ Bilinçli güvenlik mekanizması
 
-4️⃣ Floating-point dönüşümleri (C++)
+ Floating-point dönüşümleri (C++)
 float f = 3.14;   // double → float (implicit, uyarı olabilir)
 float g = 3.14f;  // OK
 
@@ -112,15 +112,15 @@ void foo(double);
 foo(3.14);   // foo(double)
 foo(3.14f);  // foo(float)
 
-5️⃣ Pointer dönüşümleri (C++ çok katı)
+Pointer dönüşümleri (C++ çok katı)
 Dönüşüm	C	C++
-void* → T*	implicit	❌ yasak
+void* → T*	implicit	 yasak
 T* → void*	implicit	implicit
 void* p = malloc(10);
-int* ip = p;          // ❌ C++ hata
+int* ip = p;          //  C++ hata
 int* ip2 = (int*)p;  // OK ama tehlikeli
 
-6️⃣ Explicit dönüşümler (cast) – C++ tarzı
+ Explicit dönüşümler (cast) – C++ tarzı
 
 C++’ta C-style cast yerine şunlar önerilir:
 
@@ -129,14 +129,14 @@ reinterpret_cast<char*>(p);  // düşük seviye pointer cast
 const_cast<char*>(str);      // const kaldırma
 
 
-👉 Neden?
+ Neden?
 
 Ne yaptığını açıkça belli eder
 
 Derleyici daha iyi uyarır
 
-7️⃣ signed ↔ unsigned: C++ için ALTIN KURAL ⚠️
-if (x < vec.size())   // ❌ vec.size() unsigned
+ signed ↔ unsigned: C++ için ALTIN KURAL 
+if (x < vec.size())   //  vec.size() unsigned
 
 
 Doğru:
@@ -150,15 +150,15 @@ size_t x;
 if (x < vec.size())
 
 
-📌 STL neredeyse her yerde size_t (unsigned) kullanır.
+ STL neredeyse her yerde size_t (unsigned) kullanır.
 
-8️⃣ Özet tablo (C++)
+ Özet tablo (C++)
 Dönüşüm	Durum
-Küçük → büyük	✅ implicit
-signed → unsigned	⚠️ implicit ama tehlikeli
-Büyük → küçük	⚠️ implicit
-{} ile narrowing	❌ compile error
-void* → T*	❌
-Overload etkisi	⚠️ çok önemli
+Küçük → büyük	implicit
+signed → unsigned	 implicit ama tehlikeli
+Büyük → küçük	 implicit
+{} ile narrowing	 compile error
+void* → T*	
+Overload etkisi	 çok önemli
 
 */
