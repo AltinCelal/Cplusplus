@@ -88,7 +88,7 @@ Eskiden class içinde direkt initialize edemezdin:
 
 class A {
 public:
-    int x = 5;  // ❌ eski C++'ta hata
+    int x = 5;  // eski C++'ta hata
 };
 
 
@@ -133,7 +133,7 @@ Her nesne oluşturulduğunda x = 5 olur.
 
  Constructor Override Eder mi?
 
-Evet 👇
+Evet
 
 class A {
 public:
@@ -162,7 +162,7 @@ Class içinde initialize edemezsin:
 
 class A {
 public:
-    static int x = 5;  // ❌ hata
+    static int x = 5;  //hata
 };
 
 
@@ -260,7 +260,7 @@ gibi çalışır.
 
 this = &a
 
-2️⃣ Gerçekten Pointer mı?
+Gerçekten Pointer mı?
 
 Evet.
 
@@ -347,9 +347,7 @@ a2’nin mi?
 
 İşte burada this devreye girer.
 
-🎯 Derleyici Aslında Şunu Yapıyor
-
-Sen:
+Derleyici Aslında Şunu Yapıyor
 
 a1.set(5);
 
