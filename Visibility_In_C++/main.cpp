@@ -97,9 +97,8 @@ public:
 */
  
 /*
-
-✅ Global Scope’ta Neler Yazılabilir?
-1️⃣ Değişken Tanımları
+ Global Scope’ta Neler Yazılabilir?
+ Değişken Tanımları
 int globalVar = 10;
 double pi = 3.14;
 Global object da olabilir:
@@ -107,57 +106,57 @@ Player player1;
 
 Program başlamadan önce constructor çalışır.
 
-2️⃣ Fonksiyon Tanımları
+ Fonksiyon Tanımları
 void foo() {
     std::cout << "Hello\n";
 }
-3️⃣ Class / Struct Tanımları
+Class / Struct Tanımları
 class A {
 public:
     int x;
 };
-4️⃣ Namespace Tanımları
+ Namespace Tanımları
 namespace MySpace {
     int x = 5;
 }
-5️⃣ Using Bildirimleri
+Using Bildirimleri
 using namespace std;
-6️⃣ Typedef / using alias
+Typedef / using alias
 typedef int myInt;
 
 using myDouble = double;
-7️⃣ Enum Tanımları
+Enum Tanımları
 enum Color {
     Red,
     Green,
     Blue
 };
-8️⃣ Template Tanımları
+Template Tanımları
 template<typename T>
 T add(T a, T b) {
     return a + b;
 }
-9️⃣ Static Global Değişken
+Static Global Değişken
 static int x = 5;
 
 Bu dosya içi internal linkage sağlar.
 
-❌ Global Scope’ta Neler Yazılamaz?
-❌ Direkt Fonksiyon Çağrısı
+Global Scope’ta Neler Yazılamaz?
+Direkt Fonksiyon Çağrısı
 foo();  // HATA
 
 Çünkü:
 
 Runtime başlamadan kod çalıştırılamaz.
 
-❌ If / For / While Bloğu
+If / For / While Bloğu
 if (true) { }   // HATA
 
 Kontrol yapıları fonksiyon içinde olmalı.
 
-❌ Expression
+Expression
 5 + 3;  // HATA
-🎯 Peki Global Object Neden Serbest?
+Peki Global Object Neden Serbest?
 
 Çünkü bu:
 
@@ -169,7 +168,7 @@ Ama derleyici arka planda:
 
 Constructor’ı program başlamadan önce çağırır.
 
-🔥 Çok Kritik Kavram: Storage Duration
+Çok Kritik Kavram: Storage Duration
 
 Global değişkenler:
 
@@ -179,7 +178,7 @@ Program başında oluşturulur.
 
 Program sonunda yok edilir.
 
-⚠ Tehlike
+Tehlike
 
 Birden fazla dosyada global object varsa:
 
