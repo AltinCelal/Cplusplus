@@ -148,7 +148,7 @@ Eğer solunda bir şey yoksa:
 
 sağındaki şeyi sabit yapar
 
-1️⃣ const Player* p
+1 const Player* p
 const Player* p;
 
 Bunu şöyle de yazabilirsin:
@@ -194,7 +194,7 @@ p1.health = 50; // OK
 Çünkü:
 
 p1 normal object
-2️⃣ Player* const p
+2 Player* const p
 
 Şimdi farklı bir durum.
 
@@ -219,7 +219,7 @@ p = &p2; // HATA
 Çünkü:
 
 p const pointer
-3️⃣ const Player* const p
+3 const Player* const p
 
 Şimdi ikisi de const.
 
@@ -240,12 +240,12 @@ Pointer değiştirilemez
 p = &p2; // HATA
 Object değiştirilemez
 p->health = 100; // HATA
-4️⃣ Hepsini Tek Tabloyla Görelim
+4 Hepsini Tek Tabloyla Görelim
 yazım	pointer	object
 const Player* p	değişir	değişmez
 Player* const p	değişmez	değişir
 const Player* const p	değişmez	değişmez
-5️⃣ Gerçek Hayat Kullanımı
+5 Gerçek Hayat Kullanımı
 
 En çok kullanılanı:
 
@@ -265,7 +265,7 @@ void printPlayer(const Player* p)
 Fonksiyon:
 
 player'ı değiştirmez
-6️⃣ Pointer ile const object
+6 Pointer ile const object
 
 Şu da önemli bir durum:
 
@@ -282,7 +282,7 @@ Player* p = &player; // HATA
 Çünkü:
 
 const object → non-const pointer ile tutulamaz
-7️⃣ Gerçek Proje Örneği
+7 Gerçek Proje Örneği
 class Game
 {
 public:
@@ -296,7 +296,7 @@ public:
 Bu fonksiyon:
 
 Player'ı değiştirmeyeceğini garanti eder
-8️⃣ Küçük Bir Zihin Testi
+8 Küçük Bir Zihin Testi
 
 Bu kod çalışır mı?
 
