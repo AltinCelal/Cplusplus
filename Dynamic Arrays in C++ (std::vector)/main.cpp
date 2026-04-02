@@ -380,9 +380,8 @@ nums: 1 2 3 4
 v:    1 2 3 4
 
 Yani:
-
-✔ güvenli
-❌ pahalı (büyük vectorlerde)
+güvenli
+pahalı (büyük vectorlerde)
 
 Örnek
 void addElement(vector<int> v)
@@ -399,7 +398,7 @@ a = 1 2 3
 
 Çünkü kopya değişti.
 
-2️⃣ Vector'ü Referans ile Göndermek
+vector'ü Referans ile Göndermek
 
 Gerçek programlarda çoğu zaman referans kullanılır.
 
@@ -446,7 +445,7 @@ int main()
 Çıktı:
 
 2 4 6
-3️⃣ const Vector Parametreleri
+const Vector Parametreleri
 
 Eğer fonksiyon vectorü değiştirmeyecekse en doğru yöntem:
 
@@ -471,7 +470,7 @@ void printVector(const vector<int>& v)
 Çünkü:
 
 const vector değiştirilemez
-4️⃣ Fonksiyondan Vector Döndürmek
+Fonksiyondan Vector Döndürmek
 
 C++'ta fonksiyonlar vector döndürebilir.
 
@@ -584,7 +583,8 @@ Yani:
 
 satırlar → vector
 matrix → satırların vectorü
-2️⃣ 2D Vector Tanımlama
+
+2D Vector Tanımlama
 vector<vector<int>> matrix;
 
 Şu an:
@@ -593,7 +593,7 @@ matrix = []
 
 hiç satır yok.
 
-3️⃣ 2D Vector Oluşturma (Boyut Vererek)
+2D Vector Oluşturma (Boyut Vererek)
 
 Örnek: 3x4 matrix
 
