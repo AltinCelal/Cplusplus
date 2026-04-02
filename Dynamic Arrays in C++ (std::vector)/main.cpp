@@ -46,10 +46,10 @@ Vector Bu Problemleri Çözer
 
 Vector:
 
-✔ otomatik büyür
-✔ memory yönetir
-✔ kolay kullanılır
-✔ güvenlidir
+otomatik büyür
+memory yönetir
+kolay kullanılır
+güvenlidir
 
 _________________________________________________________________________________________________________________________________________
 std::vector-> Standart kütüphanenin (STL) sunduğu, dinamik boyutlu, heap'te yaşayan, kendini otomatik yöneten dizi yapısıdır.
