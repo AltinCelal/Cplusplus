@@ -638,7 +638,7 @@ int main()
 0 0 0 0
 0 0 0 0
 0 0 0 0
-4️⃣ Başlangıç Değeri Vererek Matrix Oluşturma
+Başlangıç Değeri Vererek Matrix Oluşturma
 vector<vector<int>> matrix(3, vector<int>(4, 7));
 
 Sonuç:
@@ -648,7 +648,7 @@ Sonuç:
  [7,7,7,7],
  [7,7,7,7]
 ]
-5️⃣ Matrix Elemanına Erişim
+Matrix Elemanına Erişim
 
 Syntax:
 
@@ -684,7 +684,7 @@ for(int i=0;i<matrix.size();i++)
 
     cout << endl;
 }
-8️⃣ Range Based Loop ile Matrix
+Range Based Loop ile Matrix
 for(const auto& row : matrix)
 {
     for(int x : row)
@@ -697,7 +697,7 @@ for(const auto& row : matrix)
 
 Bu modern C++ stilidir.
 
-9️⃣ Dinamik Matrix Oluşturma
+Dinamik Matrix Oluşturma
 
 Mesela kullanıcıdan boyut alalım.
 
