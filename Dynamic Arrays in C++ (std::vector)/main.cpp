@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 /*
 standart array:
 int sayilar[5] = {1, 2, 3, 4, 5};
