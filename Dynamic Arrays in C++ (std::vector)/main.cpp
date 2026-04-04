@@ -136,7 +136,6 @@ capacity dolduğunda arka planda:
 3) eski belleği sil
 
 
-
 resize()
 
 resize() vector'ün size’ını değiştirir.
